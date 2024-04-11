@@ -31,6 +31,7 @@ public class Task {
     private LocalDateTime dueDate;
 
     @Column(name = "completed", nullable = false)
+    @Enumerated(EnumType.STRING)
     private Completed completed;
 
     @Override
