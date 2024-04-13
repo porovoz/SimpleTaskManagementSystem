@@ -14,10 +14,10 @@ import java.time.LocalDateTime;
 @Data
 public class CreateOrUpdateTaskDTO {
 
-    @Size(max = 64)
+    @Size(min = 4, max = 32)
     private String title;
 
-    @Size(max = 255)
+    @Size(min = 8, max = 64)
     private String description;
 
     @FutureOrPresent
