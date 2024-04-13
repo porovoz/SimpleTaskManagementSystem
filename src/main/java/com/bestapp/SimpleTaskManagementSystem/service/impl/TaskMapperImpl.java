@@ -9,8 +9,13 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The {@code TaskMapperImpl} class is a component responsible for converting task entities (Task) and DTO
+ * (Data Transfer Object) to various formats and vice versa.
+ */
 @Component
 public class TaskMapperImpl implements TaskMapper {
+
     @Override
     public TaskDTO toTaskDTO(Task task) {
         TaskDTO taskDTO = new TaskDTO();
