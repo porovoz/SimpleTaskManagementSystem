@@ -107,7 +107,7 @@ class TaskServiceImplTest {
      */
     @Test
     @DisplayName("Checking the search for the task by id")
-    void getTaskByIdTest() {
+    void findTaskByIdTest() {
         Long id = 1L;
 
         when(taskRepositoryMock.findById(anyLong())).thenReturn(Optional.of(expected));
@@ -129,7 +129,7 @@ class TaskServiceImplTest {
      */
     @Test
     @DisplayName("Checking for throwing an exception when searching for a task by id")
-    void getTaskByIdNotFoundExceptionTest() {
+    void findTaskByIdNotFoundExceptionTest() {
         Long id = 10L;
 
         when(taskRepositoryMock.findById(anyLong())).thenReturn(Optional.empty());
@@ -145,7 +145,7 @@ class TaskServiceImplTest {
      */
     @Test
     @DisplayName("Checking the search for a list of all tasks")
-    void getAllTasksTest() {
+    void findAllTasksTest() {
 
         List<Task> expectedTasks = List.of(expected, expected2, expected3);
 
