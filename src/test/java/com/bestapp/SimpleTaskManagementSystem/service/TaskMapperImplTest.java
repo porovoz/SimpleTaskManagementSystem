@@ -54,6 +54,11 @@ class TaskMapperImplTest {
         expected3.setDescription("Test description");
         expected3.setDueDate(LocalDateTime.now().plusDays(3).truncatedTo(ChronoUnit.HOURS));
         expected3.setCompleted(Completed.IN_PROCESS);
+
+        createOrUpdateTaskDTO.setTitle("New title");
+        createOrUpdateTaskDTO.setDescription("New description");
+        createOrUpdateTaskDTO.setDueDate(LocalDateTime.now().plusDays(1).truncatedTo(ChronoUnit.HOURS));
+        createOrUpdateTaskDTO.setCompleted(Completed.IN_PROCESS);
     }
 
     /**
