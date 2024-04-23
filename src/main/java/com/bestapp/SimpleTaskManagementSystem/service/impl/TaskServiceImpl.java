@@ -65,7 +65,7 @@ public class TaskServiceImpl implements TaskService {
     }
 
     /** Getting all tasks pageable.<br>
-     * - Search for all tasks pageable {@link TaskRepository#findAll(Example, Pageable)}.<br>
+     * - Search for all tasks pageable {@link TaskRepository#findAll(Pageable)}.<br>
      * - Converting all task list into task data transfer object list {@link TaskMapper#toTaskDTOList(List)}.
      * @param pageNumber page number
      * @param pageSize page size number
